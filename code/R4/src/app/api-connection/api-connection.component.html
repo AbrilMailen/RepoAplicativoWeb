@@ -1,0 +1,65 @@
+<div class=" text-center">
+<h1>Consumo de API con Angular</h1>
+<a class="btn btn-primary" href="https://weatherstack.com/" target="_blank">Link a la API utilizada</a>
+<div class="container mt-5">
+    <table class="table table-bordered table-striped table-sm">
+        <tbody>
+            <tr>
+                <td scope="col">Pais</td>
+                <td scope="col">Ciudad</td>
+                <td scope="col">Temperatura</td>
+                <td scope="col">Estado</td>
+                <td scope="col">Descripcion</td>
+                <td scope="col">Humedad</td>
+                <td scope="col">Presion</td>
+                <td scope="col">Indice UV</td>
+                <td scope="col">Visibilidad</td>
+            </tr>
+            <tr *ngIf="datosBuenosAires">
+                <td scope="col">{{datosBuenosAires.location.country}}</td>
+                <td scope="col">{{datosBuenosAires.location.name}}</td>
+                <td scope="col">{{datosBuenosAires.current.temperature}}</td>
+                <td scope="col"><img [src]="datosBuenosAires.current.weather_icons[0]"></td>
+                <td scope="col">{{datosBuenosAires.current.weather_descriptions}}</td>
+                <td scope="col">{{datosBuenosAires.current.humidity}}</td>
+                <td scope="col">{{datosBuenosAires.current.pressure}}</td>
+                <td scope="col">{{datosBuenosAires.current.uv_index}}</td>
+                <td scope="col">{{datosBuenosAires.current.visibility}}</td>
+            </tr>
+            <tr *ngIf="datosNY">
+                <td scope="col">{{datosNY.location.country}}</td>
+                <td scope="col">{{datosNY.location.name}}</td>
+                <td scope="col">{{datosNY.current.temperature}}</td>
+                <td scope="col"><img [src]="datosNY.current.weather_icons[0]"></td>
+                <td scope="col">{{datosNY.current.weather_descriptions}}</td>
+                <td scope="col">{{datosNY.current.humidity}}</td>
+                <td scope="col">{{datosNY.current.pressure}}</td>
+                <td scope="col">{{datosNY.current.uv_index}}</td>
+                <td scope="col">{{datosNY.current.visibility}}</td>
+            </tr>
+            <tr *ngIf="datosLondon">
+                <td scope="col">{{datosLondon.location.country}}</td>
+                <td scope="col">{{datosLondon.location.name}}</td>
+                <td scope="col">{{datosLondon.current.temperature}}</td>
+                <td scope="col"><img [src]="datosLondon.current.weather_icons[0]"></td>
+                <td scope="col">{{datosLondon.current.weather_descriptions}}</td>
+                <td scope="col">{{datosLondon.current.humidity}}</td>
+                <td scope="col">{{datosLondon.current.pressure}}</td>
+                <td scope="col">{{datosLondon.current.uv_index}}</td>
+                <td scope="col">{{datosLondon.current.visibility}}</td>
+            </tr>
+            <tr *ngIf="datosMontevideo">
+                <td scope="col">{{datosMontevideo.location.country}}</td>
+                <td scope="col">{{datosMontevideo.location.name}}</td>
+                <td scope="col">{{datosMontevideo.current.temperature}}</td>
+                <td scope="col"><img [src]="datosMontevideo.current.weather_icons[0]"></td>
+                <td scope="col">{{datosMontevideo.current.weather_descriptions}}</td>
+                <td scope="col">{{datosMontevideo.current.humidity}}</td>
+                <td scope="col">{{datosMontevideo.current.pressure}}</td>
+                <td scope="col">{{datosMontevideo.current.uv_index}}</td>
+                <td scope="col">{{datosMontevideo.current.visibility}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
